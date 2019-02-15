@@ -1,0 +1,26 @@
+head {
+  font-family: 'Raleway', sans-serif;
+  padding: 1em 2em;
+  font-size: 18px;
+}
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em;
+color:white;}
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+.jumbotron{
+    background-image: url("../bg-head-ny.jpg");
+      background-size: cover;
+  background-repeat: no-repeat;
+  color:white
+}
+section{
+background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+color: white;
+}
