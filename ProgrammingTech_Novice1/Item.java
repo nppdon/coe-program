@@ -4,9 +4,23 @@ import java.util.*;
 
 public class Item{
     private String name = new String();
-    private int hp;
+    private int property;
 
-    public Item(){
+    public void setName(String newname){
+        name=newname;
+    }
+    public void setProperty(int newproperty)
+    {
+        property=newproperty;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getProperty(){
+        return property;
+    }
+}
+/*    public Item(){
         name = "potion";
         hp = 50;
     }
@@ -14,4 +28,8 @@ public class Item{
     public int getItem(){
         return this.hp;
     }
+    public String getItemsname(){
+        return name;
+    }
 }
+*/
