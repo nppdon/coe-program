@@ -6,6 +6,8 @@ public class Novice
     private int hp;
     private int exp;
     private int attack;
+    private int killed;
+    private int level;
     private String carreername;
 
     Bag bg = new Bag();
@@ -22,19 +24,31 @@ public class Novice
     {
         return attack;
     }
+    public int GetKill(){
+        return killed;
+    }
+    public String GetCareer(){
+        return carreername;
+    }
+    public int GetLevel(){
+        return level;
+    }
     public Novice()
     {
         hp=300;
         exp=0;
         attack=10;
+        killed=0;
+        level = 1;
         carreername = "Novice";
     } 
     
-    public void AttackEnemies()
+    public void AttackEnemies(int damage)
     {
-        hp = hp - 50;
+        hp = hp - damage;
         exp = exp + 10;
         attack = attack + 5;
+        killed=killed+1;
     }
     public void AssassinAttack(){
         hp = hp - 20;
@@ -81,5 +95,13 @@ public class Novice
     {
         carreername = newname;
     }
-
+    public void setLevel(){
+        level=level+1;
+    }
+    public void paying(int payment){
+        attack = attack-payment;
+    }
+    public void transferCash(int cash){
+        attack= attack+cash;
+    }
 }

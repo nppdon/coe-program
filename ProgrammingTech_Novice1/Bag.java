@@ -7,15 +7,26 @@ public class Bag
     public int bagsitems = 0;
     public int numberofEXPpotion = 0;
     public int numberofHPpotion = 0;
+    public int coin=0;
     Item its = new Item();
     EXPPotion exppotion = new EXPPotion();
     HPPotion hppotion = new HPPotion();
+    GoldCoin goldcoins = new GoldCoin();
 
+    public int useGoldCoin(){
+        return goldcoins.getProperty();
+    }
     public int useEXPPotion(){
         return exppotion.getProperty();
     }
     public int useHPPotion(){
         return hppotion.getProperty();
+    }
+    public void decreaseGoldCoin(){
+        --coin;
+    }
+    public void increaseGoldCoin(){
+        ++coin;
     }
     public void decreaseItemEXPPotion(){
         --numberofEXPpotion;
@@ -32,6 +43,9 @@ public class Bag
     public void increaseHPPotion(){
         ++numberofHPpotion;
         ++bagsitems;
+    }
+    public int returnCoins(){
+        return coin;
     }
     public int returnEXPPotion(){
         return numberofEXPpotion;
